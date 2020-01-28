@@ -14,4 +14,4 @@ for arg in "$@"; do
   cmd+=("${quoted}")
 done
 
-sops exec-file secrets.yaml "qbec --vm:ext-str-file secrets={} ${cmd[*]}"
+sops exec-file ../secrets.yaml "qbec --vm:ext-str-file secrets={} ${cmd[*]}"
